@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary mb-3">
+	{{ partial "navigation/brand" . }}
+
+	<button
+		class="navbar-toggler"
+		type="button"
+		data-toggle="collapse"
+		data-target="#primary-navigation"
+		aria-controls="primary-navigation"
+		aria-expanded="false"
+		aria-label="Toggle navigation"
+	>
+		<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="primary-navigation">
+		{{ partial "navigation/items" . }}
+	</div>
+</nav>

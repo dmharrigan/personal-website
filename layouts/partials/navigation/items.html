@@ -1,0 +1,8 @@
+<ul class="navbar-nav ml-auto">
+	{{ $curr := .RelPermalink }}
+	{{ range .Site.Menus.main }}
+		<li class="nav-item {{ if eq $curr .URL }}active{{ end }}">
+			<a class="nav-link" href="{{ .URL }}"> {{ .Name }}</a>
+		</li>
+	{{ end }}
+</ul>

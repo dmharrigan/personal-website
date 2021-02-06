@@ -1,0 +1,25 @@
+{{ $featured := first 3 (sort (where $.Site.Pages "Section" "posts") "Params.date" "desc") }}
+
+<div
+	id="mainCarousel"
+	class="carousel slide carousel-fade"
+	data-ride="carousel"
+>
+	<ol class="carousel-indicators">
+		{{ range $i, $x := $featured }}
+			<li
+				data-bs-target="#mainCarousel"
+				data-bs-slide-to="{{ add $i 1 }}"
+				class="{{ if eq $i 0 }}active{{ end }}"
+			></li>
+		{{ end }}
+	</ol>
+
+	<div class="carousel-inner">
+		{{ range $i, $x := $featured }}
+			{{ partial "home/carousel/item" (dict "i" $i "x" $x) }}
+		{{ end }}
+	</div>
+
+	{{ partial "home/carousel/controls" . }}
+</div>

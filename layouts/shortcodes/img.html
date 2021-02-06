@@ -1,0 +1,34 @@
+{{ $alt := .Get "alt" }}
+{{ $bundle := .Get "bundle" }}
+{{ $class := .Get "class" }}
+{{ $sizes := .Get "sizes" }}
+{{ $url := .Get "src" }}
+
+{{ $resolutions := $.Site.Data.meta.imageResolutions }}
+{{ $list := apply $resolutions "printf" "%sx" "." }}
+
+{{ $src := "" }}
+{{ if eq $bundle "true" }}
+	{{ $src = .Page.Resources.GetMatch $url }}
+	{{ else }}
+	{{ $src = resources.Get $url }}
+{{ end }}
+
+{{ with $src }}
+	<img
+		sizes="{{ with $sizes }}{{ . }}{{ end }}"
+		srcset="
+			{{ range $i, $x := $list }}
+				{{ $resize :=  $src.Resize $x }}
+				{{ with $resize.RelPermalink }}
+					{{ printf "%s %sw," . (index $resolutions $i) }}
+				{{ end }}
+			{{ end }}
+		"
+		src="{{ .RelPermalink }}"
+		alt="{{ with $alt }}{{ . }}{{ end }}"
+		class="{{ with $class }}{{ . }}{{ end }}"
+	/>
+	{{ else }}
+	{{ printf "Source (%s) not found: %s" $url $.Position }}
+{{ end }}

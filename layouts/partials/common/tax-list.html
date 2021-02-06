@@ -1,0 +1,18 @@
+<p class="m-0 p-0">
+	Categories:
+
+	{{ range (.GetTerms "categories") }}
+		<a href="{{ .Permalink }}" class="badge badge-pill badge-light"
+			>{{ .LinkTitle }}</a
+		>
+	{{ end }}
+</p>
+<p class="m-0 p-0">
+	Tags:
+
+	{{ range (.GetTerms "tags") }}
+		<a href="{{ .Permalink }}" class="badge badge-pill badge-light"
+			>{{ .LinkTitle }}</a
+		>
+	{{ end }}
+</p>

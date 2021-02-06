@@ -1,0 +1,36 @@
+{{ $brand := resources.Get "img/Recipe First logo.png" }}
+{{ $brand := $brand.Resize "x30" }}
+
+<!-- Large Screens -->
+<a
+	class="navbar-brand d-none d-lg-block"
+	href="/"
+	aria-label="Recipe First Homepage"
+>
+	<img
+		src="{{ $brand.RelPermalink }}"
+		height="30"
+		class="d-inline-block align-top"
+		alt="Recipe First Logo"
+		loading="lazy"
+	/>
+
+	<div class="h5 ml-2 d-inline-block mb-0">Recipe First</div>
+</a>
+
+<!-- Small Screens -->
+<a
+	class="navbar-brand d-block d-lg-none mx-auto text-center"
+	href="/"
+	aria-label="Recipe First Homepage"
+>
+	<img
+		src="{{ $brand.RelPermalink }}"
+		height="30"
+		class="d-inline-block align-top"
+		alt="Recipe First Logo"
+		loading="lazy"
+	/>
+
+	<div class="h5 d-inline-block ml-2 mb-0">Recipe First</div>
+</a>

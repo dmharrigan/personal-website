@@ -1,0 +1,28 @@
+baseURL = "http://192.168.1.238:1313/"
+languageCode = "en-us"
+title = "Recipe First"
+uglyurls = false
+timeout = 120000
+summaryLength = 35
+disqusShortname = "recipe-first"
+
+[menu]
+	[[menu.main]]
+		name = "About Me"
+		weight = 300
+		url = "/info/about/"
+		identifier = "about"
+	[[menu.main]]
+		name = "Resources"
+		weight = 200
+		url = "/info/resources/"
+		identifier = "resources"
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = false
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100

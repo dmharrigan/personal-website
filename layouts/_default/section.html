@@ -1,0 +1,7 @@
+{{ define "main" }}
+	{{ template "_internal/pagination.html" . }}
+	{{ range .Paginator.Pages }}
+		{{ partial "common/article-card" . }}
+	{{ end }}
+	{{ template "_internal/pagination.html" . }}
+{{ end }}

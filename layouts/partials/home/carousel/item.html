@@ -1,0 +1,22 @@
+{{ $web := .x.Resources.GetMatch "card-img.jpg" }}
+
+<div
+	class="carousel-item {{ if eq .i 0 }}active{{ end }}"
+	data-interval="10000"
+>
+	<div class="aspect-16-9">
+		{{ $src := .x.Resources.GetMatch "card-img.jpg" }}
+		{{ $class := "d-none d-lg-block w-100" }}
+		{{ $alt := .x.Params.Title }}
+		{{ $isResource := true }}
+		{{ partial "common/image" (dict "src" $src "class" $class "alt" $alt "isResource" $isResource) }}
+	</div>
+
+	<div class="carousel-caption">
+		<h2>{{ .x.Params.title }}</h2>
+		<p>{{ .x.Params.description }}</p>
+		<a href="{{ $.x.RelPermalink }}" class="btn btn-dark text-light">
+			Read More
+		</a>
+	</div>
+</div>

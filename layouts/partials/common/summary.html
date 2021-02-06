@@ -1,0 +1,16 @@
+<div class="card-body d-flex flex-column h-100">
+	<h5 class="card-title mb-1 text-truncate">
+		<a href="{{ .Permalink }}">
+			{{ .Title }} | {{ .Date.Format "January 2, 2006" }}</a
+		>
+	</h5>
+	<p class="card-text lead text-truncate">
+		{{ .Description }}
+	</p>
+	<div class="flex-grow-1">
+		{{ partial "common/tax-list" . }}
+	</div>
+	<footer class="text-right">
+		<a href="{{ .Permalink }}">Read more →</a>
+	</footer>
+</div>
