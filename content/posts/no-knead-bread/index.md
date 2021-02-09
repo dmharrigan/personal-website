@@ -13,7 +13,7 @@ description: "An easy overnight loaf made with all purprose flour"
 summary: ""
 ---
 
-{{<img sizes="(max-width: 1000px) 400px, 600px" src="card-img.jpg" bundle="true" class="mx-auto d-block mt-4 mb-4" alt="loaf of bread">}}
+{{<img sizes="(max-width: 1000px) 400px, 600px" src="card-img.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="loaf of bread">}}
 
 ## Tools
 
@@ -67,14 +67,14 @@ For more info on baker’s percentages, check out King Arthur Flour’s detailed
 7. If you are adding olive oil, add that now so it is evenly mixed in the dough.
 8. Use your hands to incorporate the ingredients into a mildly shaggy mass of
    dough.
-   {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-after-mixing.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough after mixing">}}
+   {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-after-mixing.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough after mixing">}}
 9. Keep the dough in the bowl and cover with plastic wrap or shower cap.
 10. Let the dough rest for 12 -14 hours. You’ll notice it about doubles in size
     and kind of takes on the shape of the bowl.
-    {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-after-12h-rest.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough after 12 hour rest">}}
+    {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-after-12h-rest.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough after 12 hour rest">}}
 11. After it has rested, fold the dough on itself a few times, thinking about
     the blow like a clock:
-    {{<img sizes="(max-width: 1000px) 400px, 600px" src="before-fold-with-clock.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough before fold, with clock markings">}}
+    {{<img sizes="(max-width: 1000px) 400px, 600px" src="before-fold-with-clock.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough before fold, with clock markings">}}
 12. Starting at 12 o’clock, pick the edge of the dough up and fold it down
     towards 6 o’clock. You’ll notice all my pictures have the folding edge in
     the 12 o’clock position, I tend to rotate the bowl as I go, so that the
@@ -84,13 +84,13 @@ For more info on baker’s percentages, check out King Arthur Flour’s detailed
     2. Take 6 o’clock and fold towards 12;
     3. Take 9 o’clock and fold towards 3.
 
-    {{<img sizes="(max-width: 1000px) 400px, 600px" src="bread-folding-collage.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="collage showing the stages of folding the bread">}}
+    {{<img sizes="(max-width: 1000px) 400px, 600px" src="bread-folding-collage.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="collage showing the stages of folding the bread">}}
 
 13. One set of folds is likely sufficient for this recipe. If the dough is
     really slack and not holding its shape as you fold, you can go around making
     folds for a 2nd or 3rd time. I had to give mine another set of folds to
     bring it a little tighter.
-    {{<img sizes="(max-width: 1000px) 400px, 600px" src="another-round-folds.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough after folds">}}
+    {{<img sizes="(max-width: 1000px) 400px, 600px" src="another-round-folds.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough after folds">}}
 
 14. After folding, cover the dough in the mixing bowl with plastic wrap or a
     shower cap and rest the dough for another 1 to 2 hours.
@@ -115,7 +115,7 @@ For more info on baker’s percentages, check out King Arthur Flour’s detailed
 
 16. Transfer the shaped loaf to a piece of parchment paper using your bench
     scraper or hands and cover with a lightly floured kitchen towel.
-    {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-shaped.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough after shaping">}}
+    {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-shaped.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough after shaping">}}
 
 17. Rest the shaped loaf for about 30 minutes while the oven preheats. You’re
     looking for the dough to grow in size a little, and when you gently poke it,
@@ -134,7 +134,7 @@ For more info on baker’s percentages, check out King Arthur Flour’s detailed
       direct the steam as it escapes during baking and help maintain the shape
       of your loaf. Don’t worry if it is a looking a little falt- the dutch oven
       will work its magic!
-      {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-proofed-and-cut.jpg" bundle="true" class="mx-auto mt-4 mb-4" alt="dough after proofing and scoring">}}
+      {{<img sizes="(max-width: 1000px) 400px, 600px" src="dough-proofed-and-cut.jpg" bundle="true" class="mx-auto d-block img-fluid mt-4 mb-4" alt="dough after proofing and scoring">}}
 
 20. Carefully remove the lid from the dutch oven (remove any liquid as noted
     above) and use the edges of the parchment paper to lower the loaf inside the
