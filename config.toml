@@ -5,6 +5,7 @@ uglyurls = false
 timeout = 120000
 summaryLength = 35
 disqusShortname = "recipe-first"
+googleAnalytics = "UA-173365922-1"
 
 [menu]
 	[[menu.main]]
