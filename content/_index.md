@@ -1,4 +1,4 @@
 ---
 title: "Home"
-description: "A website for Dana Harrigan."
+description: "Recipes and ramblings from a home cook"
 ---
