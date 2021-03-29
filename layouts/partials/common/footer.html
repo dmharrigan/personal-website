@@ -1,12 +1,6 @@
 <footer class="bg-primary mt-5 p-3">
 	<div class="container-fluid text-center">
 		<a
-			href="mailto:recipe1st@gmail.com"
-			class="btn btn-lg p-0 mx-2 btn-link text-light"
-		>
-			<i class="fa fa-envelope"></i>
-		</a>
-		<a
 			href="https://twitter.com/day_obz"
 			target="_blank"
 			class="btn btn-lg p-0 mx-2 btn-link text-info"
@@ -14,7 +8,18 @@
 			<i class="fab fa-twitter"></i>
 		</a>
 	</div>
-	<div class="container text-center text-light">
-		<p class="m-0">&copy; 2021 Recipe First</p>
-	</div>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script
+		async
+		src="https://www.googletagmanager.com/gtag/js?id=UA-173365922-1"
+	></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
+
+		gtag("config", "UA-173365922-1");
+	</script>
 </footer>
