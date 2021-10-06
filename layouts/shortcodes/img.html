@@ -4,7 +4,7 @@
 {{ $sizes := .Get "sizes" }}
 {{ $url := .Get "src" }}
 
-{{ $resolutions := $.Site.Data.meta.imageResolutions }}
+{{ $resolutions := site.Data.meta.imageResolutions }}
 {{ $list := apply $resolutions "printf" "%sx" "." }}
 
 {{ $src := "" }}

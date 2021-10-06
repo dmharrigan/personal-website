@@ -1,18 +1,19 @@
-<p class="m-0 p-0 card-text">
-	Categories:
+<div class="container">
+	<div class="row">
+		<div class="col m-0 p-0 card-text">
+			<h5 class="text-light">{{ .Params.position }}</h5>
+		</div>
+		<div class="col text-right"></div>
+	</div>
+</div>
 
-	{{ range (.GetTerms "categories") }}
-		<a href="{{ .Permalink }}" class="badge badge-pill badge-light"
-			>{{ .LinkTitle }}</a
-		>
-	{{ end }}
-</p>
-<p class="m-0 p-0 card-text">
-	Tags:
-
-	{{ range (.GetTerms "tags") }}
-		<a href="{{ .Permalink }}" class="badge badge-pill badge-light"
-			>{{ .LinkTitle }}</a
-		>
-	{{ end }}
-</p>
+<div class="container">
+	<div class="row">
+		<div class="col m-0 p-0 card-text">
+			<h5 class="text-light">{{ .Params.location }}</h5>
+		</div>
+		<div class="col text-right">
+			<h5 class="text-light">{{ .Params.start }} to {{ .Params.end }}</h5>
+		</div>
+	</div>
+</div>

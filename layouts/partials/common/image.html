@@ -1,24 +1,17 @@
-{{ $src := "" }}
-{{ if eq $.isResource true }}
-	{{ $src = $.src }}
-	{{ else }}
-	{{ $src = resources.Get $.src }}
-{{ end }}
-
-{{ $resolutions := .Site.Params.imageResolutions }}
+{{ $src := $.src }}
+{{ $resolutions := site.Data.meta.imageResolutions }}
 {{ $list := apply $resolutions "printf" "%sx" "." }}
 
 {{ with $src }}
 	<img
 		sizes="{{ with $.sizes }}{{ . }}{{ end }}"
 		srcset="
-				{{ range $i, $x := $list }}
-					{{ $resize :=  $src.Resize $x }}
-					{{ with $resize.RelPermalink }}
-						{{ printf "%s %sw," . (index $resolutions $i) }}
-					{{ end }}
+			{{ range $i, $x := $list }}
+				{{ $resize :=  $src.Resize $x }}
+				{{ with $resize.RelPermalink }}
+					{{ printf "%s %sw," . (index $resolutions $i) }}
 				{{ end }}
-			"
+			{{ end }}"
 		src="{{ .RelPermalink }}"
 		alt="{{ with $.alt }}{{ . }}{{ end }}"
 		class="{{ with $.class }}{{ . }}{{ end }}"

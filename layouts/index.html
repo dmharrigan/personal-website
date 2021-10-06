@@ -1,21 +1,38 @@
 {{ define "main" }}
-	<h1 class="display-3">Welcome to Recipe First!</h1>
-	<p class="lead">
-		This is where I scream into the void about food- the cooking, the
-		baking, and the eating.
-	</p>
-	<p class="lead">
-		I post both recipe based and rambling based things. In all my recipe
-		posts you'll find the recipe (tools, ingredients, and method) at the top
-		of the post, with notes and my miscellaneous thoughts following. Hence
-		the name "Recipe First". This is the layout I like best for my recipes
-		because often for me there isn't an important or intesting story tied to
-		what I'm making - I'm just playing around in the kitchen and working on
-		the recipes that I enjoy making most.
-	</p>
-	<p class="lead">
-		Bread will always be one of my favorite challenges, and I hope to get
-		more bread recipes prefected (or at least really functional) soon.
-	</p>
-	{{ partial "home/carousel/main" . }}
+	<div class="row">
+		<div class="col">
+			{{ $src := resources.GetMatch "img/myfacecropped.jpg" }}
+			{{ $class := "img-fluid rounded-circle mt-5" }}
+			{{ $alt := .Title }}
+			{{ $isResource := true }}
+			{{ $sizes := "(min-width: 750px) 500px, 100vw" }}
+			{{ $dict := dict "src" $src "class" $class "alt" $alt "isResource" $isResource "sizes" $sizes }}
+			{{ partial "common/image" $dict }}
+		</div>
+		<div class="col">
+			<h1 class="mt-5">Hello!</h1>
+			<p>
+				I'm Dana Harrigan, a New York City based administrative
+				professional.
+			</p>
+			<p>
+				On this site you'll find a list of my professional experiences
+				and personal projects, as well as a little bit more about me.
+			</p>
+			<p>
+				My professional experience is mainly administrative, split
+				between time in municipal government and the private sector,
+				with a focus on community, safety, and health. My favorite work
+				is the kind that offers me opportunities to learn and experience
+				new things.
+			</p>
+			<p>
+				I have recently completed Google's Project Management
+				Specialization from Coursera, where I learned new ways to apply
+				my budgeting, time management and organizational abilities. I
+				look forward to my next experience where I can apply and further
+				grow these and other skills.
+			</p>
+		</div>
+	</div>
 {{ end }}

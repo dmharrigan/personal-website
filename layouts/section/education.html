@@ -1,0 +1,8 @@
+{{ define "main" }}
+	{{ template "_internal/pagination.html" . }}
+	<h3 class="pt-4 pb-3">Here is a quick snapshot of my formal education.</h3>
+	{{ range $i, $x := .Paginator.Pages }}
+		{{ partial "common/smllr-article-card" (dict "i" $i "x" $x) }}
+	{{ end }}
+	{{ template "_internal/pagination.html" . }}
+{{ end }}

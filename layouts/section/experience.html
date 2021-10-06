@@ -1,0 +1,20 @@
+{{ define "main" }}
+	{{ template "_internal/pagination.html" . }}
+	<h2 class="pt-4 pb-3">
+		Here is a quick snapshot of my professional history.
+	</h2>
+	<p class="pb-5 m-0 lead">
+		A few additional details are available under the "more details" button.
+		For more details about me, my work experience, and my education you can
+		check out my
+		<a href="https://www.linkedin.com/in/danamharrigan/" class="text-info"
+			>LinkedIn
+		</a>
+		profile.
+	</p>
+
+	{{ range $i, $x := .Paginator.Pages }}
+		{{ partial "common/sm-article-card" (dict "i" $i "x" $x) }}
+	{{ end }}
+	{{ template "_internal/pagination.html" . }}
+{{ end }}

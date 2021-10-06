@@ -1,11 +1,10 @@
-baseURL = "https://recipe1st.net/"
+baseURL = "/"
 languageCode = "en-us"
-title = "Recipe First"
+title = "Dana Harrigan"
 uglyurls = false
 timeout = 120000
-summaryLength = 35
-disqusShortname = "recipe-first"
-googleAnalytics = "UA-173365922-1"
+disableKinds = ['taxonomy', 'term']
+
 
 [menu]
 	[[menu.main]]
@@ -13,17 +12,4 @@ googleAnalytics = "UA-173365922-1"
 		weight = 300
 		url = "/info/about/"
 		identifier = "about"
-	[[menu.main]]
-		name = "Resources"
-		weight = 200
-		url = "/info/resources/"
-		identifier = "resources"
 
-[related]
-  includeNewer = true
-  threshold = 80
-  toLower = false
-
-  [[related.indices]]
-    name = "tags"
-    weight = 100

@@ -2,15 +2,26 @@
 	<div class="row no-gutters">
 		<div class="col-md-4 p-3">
 			<div class="aspect-16-9">
-				{{ $src := .Resources.GetMatch "card-img.jpg" }}
+				{{ $src := .Resources.GetMatch "card-img.*" }}
+				{{ $src }}
 				{{ $class := "img-fluid rounded" }}
 				{{ $alt := .Title }}
 				{{ $isResource := true }}
-				{{ partial "common/image" (dict "src" $src "class" $class "alt" $alt "isResource" $isResource) }}
+				{{ $sizes := "(min-width: 750px) 500px, 100vw" }}
+				{{ $dict := dict "src" $src "class" $class "alt" $alt "isResource" $isResource "sizes" $sizes }}
+				{{ partial "common/image" $dict }}
 			</div>
 		</div>
 		<div class="col-md-8">
-			{{ partial "common/summary" . }}
+			<h5 class="card-title mb-0 mt-3">
+				{{ $needle := "This Site" }}
+				<a
+					href="{{ .Params.projecturl }}"
+					target="{{ if ne .Title $needle }}_blank{{ end }}"
+					>{{ .Title }}</a
+				>
+			</h5>
+			<p>{{ .Content }}</p>
 		</div>
 	</div>
 </div>
